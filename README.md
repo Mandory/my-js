@@ -12,3 +12,10 @@
 --------------
 * 1달에 최소 3개 이상의 내용 Commit :muscle:
 * 공유하고 싶은 내용이 있는 경우, Issues에 주제 남겨놓기!
+
+:star: Commit prefix 
+---------------------
+|Prefix|Description|
+|---------|------------------------|
+|Readme   | Readme.md 내용 업데이트 |
+|Algorithm| 알고리즘 문제풀이 Commit|
