@@ -19,3 +19,4 @@
 |---------|------------------------|
 |Readme   | Readme.md 내용 업데이트 |
 |Algorithm| 알고리즘 문제풀이 Commit|
+|JavaScript| JavaScript 관련 내용  |
