@@ -1,6 +1,7 @@
 package graph;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
@@ -12,6 +13,7 @@ public class Virus_2606 {
 	public static int[] visit;
 	public static int N, M;
 
+	// BFS
 	public static int bfs() {
 		Queue<Integer> queue = new LinkedList<>();
 		queue.add(1);
@@ -35,6 +37,19 @@ public class Virus_2606 {
 
 		return count - 1;
 	}
+	
+	// DFS
+	public static int count = 0;
+
+	public static void dfs(int pos) {
+		visit[pos] = 1;
+		count += 1;
+		for (int i = 1; i <= N; i++) {
+			if (map[pos][i] == 1 && visit[i] == 0) {
+				dfs(i);
+			}
+		}
+	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -51,7 +66,8 @@ public class Virus_2606 {
 			map[v1][v2] = map[v2][v1] = 1;
 		}
 
-		System.out.println(bfs());
+		dfs(1);
+		System.out.println(count - 1);
 
 		br.close();
 	}
