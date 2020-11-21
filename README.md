@@ -27,3 +27,7 @@
   * [[백준] 1904 - 01타일](https://github.com/Mandory/my-js/blob/main/Algorithm/baekjoon/dynamic/Tile01_1904.java) 
 
 * __JavaScript__
+  * [모던 자바스크립트 튜토리얼 읽기](https://github.com/Mandory/my-js/tree/main/JavaScript/readModernJS) 
+  * [Map 함수에서 Async Await 사용하기](https://github.com/Mandory/my-js/blob/main/JavaScript/asyncAwaitMap.md)
+  * [클로저](https://github.com/Mandory/my-js/blob/main/JavaScript/closure.md)
+  * [== vs ===](https://github.com/Mandory/my-js/blob/main/JavaScript/equalityCompare.md)
