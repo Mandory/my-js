@@ -98,7 +98,7 @@ Person.prototype.hello = function() {
     console.log(`Hi ${this.name}`);
 }
 ```
-![example](./images/prototypeExample.png)
+![example](./images/prototypeExample.PNG)
 
 이렇게 프로토타입으로 선언하고 jane을 만들어본다.
 ```js
