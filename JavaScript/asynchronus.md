@@ -37,6 +37,63 @@ loadData(url, function(data) {
 ## Promise (프라미스)
 > 콜백 지옥도 해결하고 콜백을 누군가한테 넘겨서 대신 수행하는 방식을 피해보자
 
+![hamburger](./images/promiseHamburger.png)
+성공이든 실패든 어떤 결과을 넘겨줄 것이라는 약속을 한다. 
+
+```js
+function delay(time) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(() => resolve(time), time);
+    });
+})
+
+// 체이닝
+delay(100)
+.then( // promise.then을 호출하면 프라미스가 반환 -> 또 then을 호출할 수 있음
+    function(result) {
+        // Fulfillment
+        console.log(result); // 100
+        return result * 2; 
+    },
+    function(error) {
+        // Reject
+    }
+) // then의 결과를 체인 아래로 전달
+.then(function(result) {
+    console.log(result); // 200
+    return result * 2;
+});
+```
+
+### Error Handling
+.catch로 프라미스에서 발생한 에러를 처리한다. 여러 then 중간에 발생한 에러를 마지막 catch에서 처리한다.
+```js
+promise()
+.then()
+.then()
+.catch()
+```
+
+## async await
+> 프라미스를 좀 더 편리하게 사용해보자
+
+function 앞에 async를 붙이면 항상 프라미스가 반환된다.
+```js
+async function A() {
+    return 'A'; // 프라미스로 감싸서 반환
+}
+```
+
+async 함수 안에서만 동작하는 await 키워드는 프라미스가 처리될 때까지 기다린다.
+```js
+async function load() {
+    let result = await fetch();
+    return result;
+}
+```
+
+에러는 try..catch를 사용해 잡을 수 있다.
+
 
 ## 참고
 * [You don't know JS: Aysnc & Performance](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20&%20performance/README.md#you-dont-know-js-async--performance)
@@ -45,6 +102,7 @@ loadData(url, function(data) {
 
 * [모던 자바스크립트 튜토리얼 - 프라미스와 async, await](https://ko.javascript.info/async)
 
-https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5
+* [정리가 잘 되어있는 글 1](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
 
-
+* [정리가 잘 되어있는 글 2](https://blog.naver.com/pjt3591oo/222204144528
+)
