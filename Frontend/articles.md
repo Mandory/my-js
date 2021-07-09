@@ -15,3 +15,7 @@
 https://lea.verou.me/2021/03/inverted-lightness-variables/
 
 https://github.blog/2021-03-25-how-github-actions-renders-large-scale-logs/
+
+https://blog.bitsrc.io/how-to-avoid-javascript-type-conversions-29e1258f37d8
+
+https://dmitripavlutin.com/javascript-queue/?utm_campaign=Frontend%2BWeekly&utm_medium=email&utm_source=Frontend_Weekly_248
