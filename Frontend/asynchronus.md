@@ -3,7 +3,7 @@
 > 자바스크립트에서 비동기 상황을 어떻게 해결하는지 살펴본다.
 
 ## 비동기?
-같은 시점에 발생하지 않는 상황이다. 예를 들면 사용자로부터 입력을 기다리거나 데이터를 DB나 네트워크를 통해서 받아와야 할 때 동시에 수행할 수 없다. You don't know JS에서는 "현재 그리고 지금 실행되지 않고 있는 나중 사이의 갭"이라고 표현한다. 그리고 현재와 나중, 이 관계를 비동기 프로그래밍 (Asynchronous programming)의 핵심이라고 말한다. 
+같은 시점에 발생하지 않는 상황이다. 예를 들면 사용자로부터 입력을 기다리거나 데이터를 DB나 네트워크를 통해서 받아와야 할 때 동시에 수행할 수 없다. You don't know JS에서는 "현재 그리고 지금 실행되지 않고 있는 나중 사이의 갭"이라고 표현한다. 그리고 현재와 나중, 이 관계를 비동기 프로그래밍 (Asynchronous programming)의 핵심이라고 말한다.
 
 ```js
 let data = loadData(url); // loadData는 async 함수
@@ -38,7 +38,7 @@ loadData(url, function(data) {
 > 콜백 지옥도 해결하고 콜백을 누군가한테 넘겨서 대신 수행하는 방식을 피해보자
 
 ![hamburger](./images/promiseHamburger.png)
-성공이든 실패든 어떤 결과을 넘겨줄 것이라는 약속을 한다. 
+성공이든 실패든 어떤 결과을 넘겨줄 것이라는 약속을 한다.
 
 ```js
 function delay(time) {
@@ -53,7 +53,7 @@ delay(100)
     function(result) {
         // Fulfillment
         console.log(result); // 100
-        return result * 2; 
+        return result * 2;
     },
     function(error) {
         // Reject
@@ -104,5 +104,4 @@ async function load() {
 
 * [정리가 잘 되어있는 글 1](https://blog.sessionstack.com/how-javascript-works-event-loop-and-the-rise-of-async-programming-5-ways-to-better-coding-with-2f077c4438b5)
 
-* [정리가 잘 되어있는 글 2](https://blog.naver.com/pjt3591oo/222204144528
-)
+* [정리가 잘 되어있는 글 2](https://blog.naver.com/pjt3591oo/222204144528)
