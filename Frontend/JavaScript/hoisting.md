@@ -24,33 +24,7 @@ hoisted = 'strange';
 
 그런데 실제 코드에서 이런 일이 발생한다면 문제가 너무 많이 생길 거 같은데...?
 
-**'use strict';`로 엄격하게 막아버리자.**
-```js
-// 이 예제는 MDN var 설명에서
-var x = 0;
-function f() {
-  var x = y = 1;
-}
-f();
-
-console.log(x, y); // 0 1
-// y도 글로벌 변수로 나와버렸다.
-```
-여기서
-```js
-'use strict'; // 글로벌 변수로 만드는 것을 막는다.
-
-var x = 0;
-function f() {
-  var x = y = 1; // Throws a ReferenceError in strict mode.
-}
-f();
-
-console.log(x, y);
-// Uncaught ReferenceError: assignment to undeclared variable y
-```
-
-**`const, let`으로 선언하자.**
+**const, let으로 선언하자.**
 
 `hoisted` 변수를 `const`로 바꿔서 선언해보자.
 ```js
