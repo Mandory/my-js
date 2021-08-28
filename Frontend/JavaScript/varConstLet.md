@@ -51,9 +51,10 @@ for (let i = 0; i < 10; i++) {
 console.log(i);
 ```
 
-### const와 let의 차이
+### const와 let의 비교
 
-const로 선언된 값은 고정이 되어 이후에 값을 변경하려고 하면 오류가 발생한다.
+let, const로 선언된 변수는 재선언이 불가하다.<br>
+하지만 둘의 차이는 const로 선언된 값은 고정이 되어 이후에 값을 변경할 수가 없다는 것이다. (immutable value)
 
 ## 참고
 
