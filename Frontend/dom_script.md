@@ -2,7 +2,7 @@
 
 > 스크립트를 동적으로 불러오는 경우에 직접 스크립트 태그를 만들어 로드하도록 했다. 이것과 관련하여 좀 더 알아보자.
 
-[WHATWG](https://html.spec.whatwg.org/multipage/scripting.html#script)을 살펴보면 `<script>` 태그를 이용하여 동적인 스크립트와 데이터를 문서에 포함시키게 할 수 있다고 작성되어있다. (기본!) 
+[WHATWG](https://html.spec.whatwg.org/multipage/scripting.html#script)을 살펴보면 `<script>` 태그를 이용하여 동적인 스크립트와 데이터를 문서에 포함시키게 할 수 있다고 작성되어있다. (기본!)
 
 기본적으로 아래와 같은 방식으로 스크립트를 추가할 수 있다. (이 외에도 module 형식으로 스크립트를 추가할 수 있는 등 type도 지정할 수 있다.)
 
@@ -27,7 +27,7 @@ HTMl 파싱 중 스크립트 태그를 만나는 순간부터는 이 스크립�
   <head>
     <script>
       // document.head is available
-      // document.body is not! 
+      // document.body is not!
       // 여기서는 body에 선언된 element에 접근이 불가능
       // HTML 파싱 중간에 스크립트 로드 및 실행으로 DOM 생성이 지연
     </script>
@@ -46,10 +46,10 @@ HTMl 파싱 중 스크립트 태그를 만나는 순간부터는 이 스크립�
 
 #### HTML 문서의 생명주기 관련 이벤트
 
-* **DOMContentLoaded**: 브라우저가 HTML 전부 로드되고 DOM 트리를 완성하는 즉시 발생한다. (이미지, 스타일 등의 외부 자원들은 기다리지 않는다.) 
+* **DOMContentLoaded**: 브라우저가 HTML 전부 로드되고 DOM 트리를 완성하는 즉시 발생한다. (이미지, 스타일 등의 외부 자원들은 기다리지 않는다.)
     - DOM이 준비되었기 때문에 DOM 노드에 접근이 가능
     - document 객체에서 실행
-* **load**: DOM 트리도 완성되고 외부 자원도 모두 불러오는 것이 끝났을 때 발생한다. 
+* **load**: DOM 트리도 완성되고 외부 자원도 모두 불러오는 것이 끝났을 때 발생한다.
     - 이미지 크기, 스타일 적용 후 실제 요소의 크기 확인 등이 가능
     - window 객체에서 실행
 * **beforeunload/unload**: 사용자가 페이지를 떠날 때 발생한다.
@@ -119,7 +119,7 @@ DOMContentLoaded 이벤트와 async 스크립트는 서로 기다리지 않는�
 - (DOM 완성 전) 스크립트 다운로드 완료: 스크립트 실행 후 DOMContentLoaded 발생할 수 있음
 
 ### 동적으로 스크립트 추가
-`let script = document.createElement('script');` 
+`let script = document.createElement('script');`
 이렇게 동적으로 스크립트 원소를 만들고 document 객체에 관련 요소를 추가해주면 다운로드가 시작된다. 그런데 이렇게 추가하면 기본적으로 async 속성 스크립트처럼 동작한다. (`script.async = false;`를 설정해주면 추가된 순서대로 실행시킬 수 있다.)
 
 ### 참고
@@ -129,3 +129,4 @@ DOMContentLoaded 이벤트와 async 스크립트는 서로 기다리지 않는�
 * [스크립트 위치에 대해 잘 정리되어있는 문서](https://velog.io/@takeknowledge/script-%ED%83%9C%EA%B7%B8%EB%8A%94-%EC%96%B4%EB%94%94%EC%97%90-%EC%9C%84%EC%B9%98%ED%95%B4%EC%95%BC-%ED%95%A0%EA%B9%8C%EC%9A%94)
 
 * [GeeksforGeeks - Difference between DOMContentLoaded and load Events](https://www.geeksforgeeks.org/difference-between-domcontentloaded-and-load-events/)
+* [async, defer 언제 쓰면 좋을지 정리되어있는 글](https://zellwk.com/blog/javascript-async-and-defer/)
