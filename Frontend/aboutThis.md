@@ -85,3 +85,12 @@ obj.cool();
 ### 참고
 - [모던 자바스크립트 튜토리얼 - 메서드와 'this'](https://javascript.info/object-methods)
 - YOU DON'T KNOW JS (타입과 문법, 스코프와 클로저 편)
+- [this, lexical scope, closure, var 한번에 잘 정리되어있는 글](http://howtonode.org/what-is-this)
+    >There some universal rules that will go a long way to understanding scope in JavaScript:
+    > * The only way to create a new scope is through the function keyword. Nothing else, not even for ... in blocks create new scopes.
+    > * The var statement declares a variable as local to the current scope and the entire current scope, not just from the var statement onward. These local variables shadow any existing variables from outer scopes.
+    > * All variables except "this" and "arguments" follow lexical scope. Their meaning is defined by the physical location in the code.
+    > * The variables "this" and "arguments" change at every nesting level. If you want to preserve them in a closure, then you need to first create a reference to their value through another variable that follows lexical scope.
+    > * The value of "this" is defined by how the function is called. You can control this through use of apply and call.
+
+    > There are exceptions to these rules, but only when messing with things like function decompilation, eval, and the with keyword. Even then you're still following the rules, just not in the way you'd expect. Function decompilation + eval transplants a function into a new lexical scope. And with can be used to make things like this.name appear as local lexical variables but work like "this" properties.
