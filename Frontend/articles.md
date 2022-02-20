@@ -1,4 +1,11 @@
 # 읽고 기억에 남는 것
+## 2022
+
+- [Inside look at modern web browser (part 1)](https://developers.google.com/web/updates/2018/09/inside-browser-part1)
+
+  아직 1편까지만 봤는데 브라우저 (여기서는 크롬 타겟) 내부 동작에 대한 설명도 잘 되어있고 귀여운 그림도 있다.
+
+## 2021
 
 - [21 Bad Front-End Habits to Drop in 2021](https://dev.to/sachagreif/21-bad-front-end-habits-to-drop-in-2021-1698?ref=uxcollective)<br>
   10번에 Using Margin 기억에 남는다. 가장 많이 쓰이는 속성 같은데 사용하지 말라니<br>
@@ -12,10 +19,6 @@
   이 글을 읽기 전에 z-index로 큰 값이 주어진 원소가 가장 맨 위로 올라온다는 것을 추측으로 알고 있었다.<br>
   그런데 이 글을 읽어보니 꼭 그렇지 않다는 것이다. 여기서 기억해야 할 것은 **stacking contexts**! z-index는 같은 **context**에 있는 원소들끼리 비교된다는 것이다. (좀 더 자세하고 심화된 내용은 다시 한번 읽어보기)
 
-https://lea.verou.me/2021/03/inverted-lightness-variables/
+* https://lea.verou.me/2021/03/inverted-lightness-variables/
 
-https://github.blog/2021-03-25-how-github-actions-renders-large-scale-logs/
-
-https://blog.bitsrc.io/how-to-avoid-javascript-type-conversions-29e1258f37d8
-
-https://dmitripavlutin.com/javascript-queue/?utm_campaign=Frontend%2BWeekly&utm_medium=email&utm_source=Frontend_Weekly_248
+* https://github.blog/2021-03-25-how-github-actions-renders-large-scale-logs/
